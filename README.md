@@ -1,59 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📖 VDFLibras: Dicionário Colaborativo de Libras
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Um projeto que visa expandir e tornar mais acessível o dicionário da Língua Brasileira de Sinais (Libras) através de uma plataforma web intuitiva e colaborativa. Usuários podem pesquisar sinais existentes, sugerir novos sinais para a comunidade e contribuir ativamente para o crescimento do acervo.
 
-## About Laravel
+## 🌟 Funcionalidades Principais
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Navegação por Categoria**: Explore sinais organizados em categorias temáticas (Cumprimentos, Cores, Roupas, etc.).
+- **Pesquisa Dinâmica**: Encontre rapidamente o sinal desejado através da barra de pesquisa.
+- **Sugestão de Novos Sinais**: Usuários logados podem preencher um formulário simples para sugerir novos sinais, com detalhes sobre o nome, categoria e descrição do movimento.
+- **Área Administrativa (Admin)**: Administradores têm acesso a uma seção para verificar e gerenciar as sugestões pendentes, garantindo a curadoria e qualidade do conteúdo.  
+  **Nota**: O badge na navegação de Admin exibe o número de sugestões pendentes.
+- **Perfil do Usuário**: Acesso rápido ao perfil e funcionalidade de logout.
+- **Design Responsivo**: Interface construída com Tailwind CSS, garantindo uma ótima experiência em desktops e dispositivos móveis.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Tecnologias Utilizadas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Este projeto foi desenvolvido utilizando o framework Laravel e o utility-first CSS framework Tailwind CSS.
 
-## Learning Laravel
+- **Backend**: PHP (com Laravel)
+- **Frontend**: Blade Templates (Laravel), Tailwind CSS, JavaScript (Vanilla)
+- **Estrutura de Componentes**: Utilização de `x-app` (Laravel Blade Component) para o layout principal.
+- **Autenticação**: Sistema de autenticação nativo do Laravel (`auth()->user()`).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📂 Estrutura de Arquivos (Visão Geral)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Os arquivos fornecidos demonstram a estrutura base da aplicação:
 
-## Laravel Sponsors
+| Arquivo                           | Função Principal                                                                                      |
+|-----------------------------------|------------------------------------------------------------------------------------------------------|
+| `app.blade.php`                   | Layout principal (`<x-app>`), inclui a barra de navegação e a lógica de menu dropdown.               |
+| `dashboard.blade.php`             | Tela inicial após o login, exibindo as categorias de sinais e o botão de Favoritos.                   |
+| `formularioSugestao.blade.php`    | Formulário para que o usuário sugira um novo sinal.                                                   |
+| `User.php`                        | Modelo Eloquent (`User`) para o banco de dados, incluindo a flag `is_admin` para controle de acesso administrativo. |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Configuração e Instalação
 
-### Premium Partners
+Para configurar e rodar o projeto em seu ambiente local, siga os passos abaixo:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1. Clone o repositório:
 
-## Contributing
+    ```bash
+    git clone https://github.com/SEU_USUARIO/VDFLibras.git
+    cd VDFLibras
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Instale as dependências do Composer (PHP):
 
-## Code of Conduct
+    ```bash
+    composer install
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Instale as dependências do NPM (Node.js/Frontend):
 
-## Security Vulnerabilities
+    ```bash
+    npm install
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. Configure o ambiente:
+   
+    Copie o arquivo de exemplo `.env`:
 
-## License
+    ```bash
+    cp .env.example .env
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    Gere a chave da aplicação:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+    Configure as credenciais do seu banco de dados no arquivo `.env`.
+
+5. Execute as migrações (Criação das tabelas no DB):
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. Compile os assets do frontend (CSS/JS):
+
+    ```bash
+    npm run dev
+    # ou 'npm run watch' para desenvolvimento em tempo real
+    ```
+
+7. Inicie o servidor de desenvolvimento do Laravel:
+
+    ```bash
+    php artisan serve
+    ```
+
+    A aplicação estará disponível em `http://127.0.0.1:8000` (ou porta similar).
+
+## 🤝 Contribuições
+
+Este é um projeto colaborativo e agradecemos qualquer tipo de contribuição! Siga o workflow padrão:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/minha-feature`).
+3. Faça o commit das suas alterações (`git commit -m 'feat: Adiciona Xyz'`).
+4. Faça o push para a branch (`git push origin feature/minha-feature`).
+5. Abra um Pull Request.
+
+## 👨‍💻 Criadores
+
+Este projeto foi desenvolvido como parte de um trabalho de Análise e Modelagem de Sistemas (AMS) por:
+
+| Nome                   | GitHub                                      |
+|------------------------|---------------------------------------------|
+| Diogo Silva de Carvalho | [@diogo-hk](https://github.com/diogo-hk)    |
+| Victor Perim            | [@victorperim123](https://github.com/victorperim123) |
+| Fernando Dzazio Reis    | Sem contato de GitHub fornecido            |
