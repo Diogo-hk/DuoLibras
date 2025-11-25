@@ -1,0 +1,8 @@
+host name:  dpg-d4il0t6r433s73a3g520-a
+port: 5432
+database: laravel_5gft
+username: laravel
+senha: OtXkUFIZ5Vm0bglMRZZJo0dYC4gPZvJP
+internal: postgresql://laravel:OtXkUFIZ5Vm0bglMRZZJo0dYC4gPZvJP@dpg-d4il0t6r433s73a3g520-a/laravel_5gft
+postgresql://laravel:OtXkUFIZ5Vm0bglMRZZJo0dYC4gPZvJP@dpg-d4il0t6r433s73a3g520-a.ohio-postgres.render.com/laravel_5gft
+PGPASSWORD=OtXkUFIZ5Vm0bglMRZZJo0dYC4gPZvJP psql -h dpg-d4il0t6r433s73a3g520-a.ohio-postgres.render.com -U laravel laravel_5gft
