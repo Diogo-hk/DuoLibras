@@ -110,4 +110,4 @@ Este projeto foi desenvolvido como parte de um trabalho de Análise e Modelagem 
 |------------------------|---------------------------------------------|
 | Diogo Silva de Carvalho | [@diogo-hk](https://github.com/diogo-hk)    |
 | Victor Perim            | [@victorperim123](https://github.com/victorperim123) |
-| Fernando Dzazio Reis    | [fernandoreis03](https://github.com/fernandoreis03)  |
+| Fernando Dzazio Reis    | [@fernandoreis03](https://github.com/fernandoreis03)  |
